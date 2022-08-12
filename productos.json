@@ -1,0 +1,37 @@
+[
+    {
+        "id": 0,
+        "procesador": "Ryzen 5 5600G",
+        "precio": 31000
+    },
+    {
+        "id": 1,
+        "procesador": "Ryzen 5 5600",
+        "precio": 29000
+    },
+    {
+        "id": 2,
+        "ram": "Corsair RGB Pro 8GB",
+        "precio": 9500
+    },
+    {
+        "id": 3,
+        "ram": "Corsair Vengeance 8GB",
+        "precio": 6000
+    },
+    {
+        "id": 4,
+        "ssd": "SanDisk Ultra 480GB'",
+        "precio": 7800
+    },
+    {
+        "id": 5,
+        "hdd": "Seagate 2TB 5400RPM",
+        "precio": 6000
+    },
+    {
+        "id": 6,
+        "fuente": "Gamemax VP 500W",
+        "precio": 8000
+    }
+]
