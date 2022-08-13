@@ -212,7 +212,7 @@ function mostrarPcs() {
     ${cpu} - 
     ${ram && ram + " GB y -"}
     ${ssd && ssd + " - "}
-    <a href="${fuentePoder}" target="blank">Ver trailer</a>`;
+    <a href="${fuentePoder}" target="blank">Ver review</a>`;
 
     const botonBorrar = document.createElement("button");
     botonBorrar.innerText = "Borrar";
