@@ -1,5 +1,4 @@
-const articulos = [
-  {
+const articulos = [{
     id: "0",
     tipo: "procesador",
     modelo: "Ryzen 5 5600G",
@@ -140,16 +139,16 @@ let pieza = prompt(
 
   "Nombra la pieza de la pc que se encarga de procesar toda la información"
 );
-while (pieza != "procesador") {
-  pieza = Swal.fire({
+if (pieza != "procesador") {
+    Swal.fire({
     icon: "error",
     title: "Incorrecto",
-    text: "La pieza que ingresaste fue " + pieza,
+    text: "La pieza que ingresaste fue " + pieza ,
     confirmButtonText: "Lo intento otra vez",
   });
 
   pieza = prompt("Ingresar otra pieza"); //sin la respuesta correcta es imposible seguir adelante
-}
+}else{
 
 const Toast = Swal.mixin({
   toast: true,
@@ -167,11 +166,12 @@ Toast.fire({
   icon: 'success',
   title: 'Has logrado entrar al constructor'
 })
+}
 
 console.log(saludo("Coder"));
 const saludo = (nombre) => "¡Saludos " + nombre + "! Acceso del constructor de computadoras concedido gracias a la respuesta " +
-pieza +
-" . Ahora podrás registrarte en el sistema"; //Saludo por consola usando función flecha
+  pieza +
+  " . Ahora podrás registrarte en el sistema"; //Saludo por consola usando función flecha
 
 let insertarSaludo = document.createElement("div");
 insertarSaludo.innerHTML = "<h2>¡Bienvenido al constructor de PC!</h2>"; //Inserción de un h2 al HTML
@@ -212,7 +212,12 @@ function mostrarPcs() {
   let listadodePcs = document.getElementById("listadodePcs");
   listadodePcs.innerHTML = "";
 
-  pcs.forEach(({ cpu, ram, ssd, fuentePoder }) => {
+  pcs.forEach(({
+    cpu,
+    ram,
+    ssd,
+    fuentePoder
+  }) => {
     let li = document.createElement("li");
     li.innerHTML = `
     <hr> 

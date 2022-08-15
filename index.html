@@ -17,8 +17,8 @@
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<script src="js/validaciones.js" defer></script>
-	<script src="js/main.js" defer></script>
+	<script src="js/validaciones.js" async></script>
+	<script src="js/main.js" async></script>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 	<h2 id="saludoId">Si puedes leer este panel, es porque eres...</h2>
 
 	<h1 class="animate__animated animate__fadeInLeftBig">
-		Constructor de Computadoras
+		Bienvenido al Constructor de Computadoras
 	</h1>
 	<form id="formulario-pc" class="form animate__animated animate__fadeInRightBig">
 		<input name="cpu" type="text" id="cpu" placeholder="Procesador" class="form-control m-1" />
@@ -161,8 +161,8 @@
 				</div>
 			</div>
 			<div class="row">
-				<button id="myBtn">Registrate</button>
-				<button class="botono" type="reset" value="Refrescar">
+				<button id="btn btn-success m-1">Registrate</button>
+				<button class="btn btn-success m-1" type="reset" value="Refrescar">
 					Refrescar
 				</button>
 			</div>
