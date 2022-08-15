@@ -141,7 +141,7 @@ let pieza = prompt(
   "Nombra la pieza de la pc que se encarga de procesar toda la información"
 );
 while (pieza != "procesador") {
-  Swal.fire({
+  pieza = Swal.fire({
     icon: "error",
     title: "Incorrecto",
     text: "La pieza que ingresaste fue " + pieza,
@@ -151,20 +151,27 @@ while (pieza != "procesador") {
   pieza = prompt("Ingresar otra pieza"); //sin la respuesta correcta es imposible seguir adelante
 }
 
-Swal.fire(
-  "Correcto!", 
-  "La pieza ingresada " + pieza + " es correcta",
-  "success"
-);
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
 
-console.log(
-  "Acceso del constructor de computadoras concedido gracias a la respuesta " +
-    pieza +
-    " . Ahora podrás registrarte en el sistema"
-);
+Toast.fire({
+  icon: 'success',
+  title: 'Has logrado entrar al constructor'
+})
 
 console.log(saludo("Coder"));
-const saludo = (nombre) => "¡Saludos " + nombre + "!"; //Saludo por consola usando función flecha
+const saludo = (nombre) => "¡Saludos " + nombre + "! Acceso del constructor de computadoras concedido gracias a la respuesta " +
+pieza +
+" . Ahora podrás registrarte en el sistema"; //Saludo por consola usando función flecha
 
 let insertarSaludo = document.createElement("div");
 insertarSaludo.innerHTML = "<h2>¡Bienvenido al constructor de PC!</h2>"; //Inserción de un h2 al HTML
