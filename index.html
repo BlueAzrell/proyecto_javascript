@@ -16,7 +16,6 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="js/validaciones.js" defer></script>
 	<script src="js/main.js" async></script>
 </head>
@@ -25,10 +24,6 @@
 	<h1 class="titulo-pagina" id="titulo">PelidaMax</h1>
 
 	<h2 id="saludoId">Si puedes leer este panel, es porque eres...</h2>
-
-	<h1 class="animate__animated animate__fadeInLeftBig">
-		
-	</h1>
 	<form id="formulario-pc" class="form animate__animated animate__fadeInRightBig">
 		<input name="cpu" type="text" id="cpu" placeholder="Procesador" class="form-control m-1" />
 		<input name="ram" type="number" id="ram" placeholder="Memoria RAM" class="form-control m-1" />
@@ -37,7 +32,7 @@
 		<button type="submit" class="btn btn-success m-1">Agregar pc</button>
 	</form>
 
-	<hr />
+	<hr/>
 
 	<ul id="listadodePcs" class="animate__animated animate__fadeInUp"></ul>
 
@@ -50,127 +45,9 @@
 	<button id="btnCarrito">Ver Carrito</button>
 	<button id="myBtn">Haz click aca</button>
 	<!-- Easter Egg de Sweet Alert para dinero infinito en tu compra -->
-
-	<form class="formulary s-caption">
-		<div class="row">
-			<div class="col-25">
-				<label for="fname">Ingresa tu nombre</label>
-			</div>
-			<div class="col-75">
-				<input type="text" id="fname" name="firstname" placeholder="Nombre Completo" />
-			</div>
-		</div>
-		<div class="row">
-			<div class="form-group col-md-2">
-				<label for="inputName">Cuántos años tienes?</label>
-				<input type="number" class="insideform" placeholder="Edad" />
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-25">
-				<label for="inputName">Género</label>
-			</div>
-			<div class="col-75">
-				Masculino
-				<input type="radio" name="genero" value="masculino" />
-			</div>
-			<div class="col-75">
-				Femenino
-				<input type="radio" name="genero" value="femenino" />
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="inputEmail4">Ingresa tu correo</label>
-				</div>
-				<div class="col-75">
-					<input type="email" class="insideform" id="inputEmail4" placeholder="tucorreo@correo.com" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="inputPassword4">Elige una contraseña</label>
-				</div>
-				<div class="col-75">
-					<input type="password" class="insideform" id="inputPassword4" placeholder="Contraseña sabia" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="inputAddress">Ingresa una dirección</label>
-				</div>
-				<div class="col-75">
-					<input type="text" class="insideform" id="inputAddress" placeholder="San Antonio de los Altos" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-25">
-					<label for="inputAddress2">Ingresa una dirección 2</label>
-				</div>
-				<div class="col-75">
-					<input type="text" class="insideform" id="inputAddress2" placeholder="Apartamento, piso" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-md-6">
-					<label for="inputCity">Ciudad</label>
-					<input type="text" class="insideform" id="inputCity" placeholder="Los Teques" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-md-4">
-					<label for="inputState">Estado</label>
-					<select id="inputState" class="insideform">
-						<option selected="">Elige:</option>
-						<option>Miranda</option>
-						<option>Distrito Capital</option>
-						<option>Zulia</option>
-						<option>Aragua</option>
-						<option>Bolívar</option>
-						<option>Amazonas</option>
-						<option>Delta Amacuro</option>
-					</select>
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-md-2">
-					<label for="inputZip">Código Postal</label>
-					<input type="text" class="insideform" id="inputZip" placeholder="1424" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-group col-md-2">
-					<label for="inputHorario">Selecciona un horario de entrega</label>
-					<select id="inputHorario" class="insideform">
-						<option selected="">Elige:</option>
-						<option>Mañana</option>
-						<option>Tarde</option>
-						<option>Noche</option>
-					</select>
-				</div>
-			</div>
-			<div class="row animate__animated animate__rotateInDownLeft">
-				<div class="form-group">
-					<div class="form-check">
-						<input class="form-check-input" type="checkbox" id="gridCheck" />
-						<label class="form-check-label" for="gridCheck">
-							Quieres suscribirte a nuestro Newsletter para llenarte el correo
-							de spam?
-						</label>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<button id="btn btn-success m-1">Registrate</button>
-				<button class="btn btn-success m-1" type="reset" value="Refrescar">
-					Refrescar
-				</button>
-			</div>
-		</div>
-	</form>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
 </html>

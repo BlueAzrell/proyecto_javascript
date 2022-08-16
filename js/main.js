@@ -78,6 +78,11 @@ for (const articulo of articulos) { //DOM de elementos al HTML
       nombre: articuloComprado.modelo,
       precio: articuloComprado.precio,
     });
+
+    Toastify({
+      text: "Item Agregado al Carrito", 
+      duration: 3000
+      }).showToast();
   };
   divarticulo.append(imgarticulo, nombrearticulo, precioarticulo, botonComprar);
   contenedorTienda.append(divarticulo);
