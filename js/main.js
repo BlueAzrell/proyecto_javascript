@@ -135,11 +135,7 @@ btn.addEventListener("click", () => {
   });
 });
 
-let pieza = prompt(
-  //pregunta de guardia de seguridad
-
-  "Nombra la pieza de la pc que se encarga de procesar toda la información"
-);
+let pieza = prompt("Nombra la pieza de la pc que se encarga de procesar toda la información"); //pregunta de guardia de seguridad
 if (pieza != "procesador") {
     Swal.fire({
     icon: "error",
@@ -167,11 +163,6 @@ Toast.fire({
   title: 'Has logrado entrar al constructor'
 })
 }
-
-console.log(saludo("Coder"));
-const saludo = (nombre) => "¡Saludos " + nombre + "! Acceso del constructor de computadoras concedido gracias a la respuesta " +
-  pieza +
-  " . Ahora podrás registrarte en el sistema"; //Saludo por consola usando función flecha
 
 let insertarSaludo = document.createElement("div");
 insertarSaludo.innerHTML = "<h2>¡Bienvenido al constructor de PC!</h2>"; //Inserción de un h2 al HTML
