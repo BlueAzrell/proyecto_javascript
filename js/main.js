@@ -52,7 +52,7 @@ const articulos = [{
 const contenedorTienda = document.getElementById("contenedorTienda");
 const contenedorCarrito = document.getElementById("contenedorCarrito");
 const carrito = [];
-for (const articulo of articulos) {
+for (const articulo of articulos) { //DOM de elementos al HTML
   const divarticulo = document.createElement("div");
   const imgarticulo = document.createElement("img");
   const nombrearticulo = document.createElement("h2");
@@ -72,8 +72,8 @@ for (const articulo of articulos) {
   botonComprar.append("Comprar");
   botonComprar.id = `${articulo.id}`;
 
-  botonComprar.onclick = () => {
-    const articuloComprado = articulos.find(
+  botonComprar.onclick = () => { //Compra del articulo que se ingresa en el carrito usando push
+    const articuloComprado = articulos.find( 
       (articulo) => articulo.id === botonComprar.id
     );
     carrito.push({
@@ -93,16 +93,17 @@ const mostrarCarrito = () => {
     contenedorCarrito.innerHTML += precioarticulo;
   }
 
-  const total = carrito.reduce(
+  const total = carrito.reduce( //usando el metodo reduce, se suma el total de todos los articulos ungresados al carrito
     (cuenta, articulo) => cuenta + articulo.precio,
     0
   );
-  contenedorCarrito.append(`Total Compra :  ${total}`);
-};
+  contenedorCarrito.append(`Total Compra :  ${total}`); 
 
 let botonCarrito = document.getElementById("btnCarrito");
-botonCarrito.onclick = mostrarCarrito;
+botonCarrito.onclick = mostrarCarrito; //se hace un display del total de la compra, sin embargo, aún no consigo la manera de hacer que solo se imprima una vez
+};
 
+//inicio del botón de búsqueda
 const btnbuscar = document.getElementById("btnBuscar");
 const inputBuscador = document.getElementById("buscadorInput");
 
@@ -147,8 +148,7 @@ if (pieza != "procesador") {
     confirmButtonText: "Lo intento otra vez",
   });
 
-  pieza = prompt("Ingresar otra pieza"); //sin la respuesta correcta es imposible seguir adelante
-}else{
+  pieza = prompt("Ingresar otra pieza"); //el prompt preguntará 2 veces antes de hacer display de un error y dejar pasar igual al constructor
 
 const Toast = Swal.mixin({
   toast: true,
@@ -178,6 +178,7 @@ insertarSaludo.innerHTML = "<h2>¡Bienvenido al constructor de PC!</h2>"; //Inse
 
 document.getElementById("saludoId").append(insertarSaludo);
 
+//inicio del constructor de PCs
 class Pc {
   constructor(cpu, ram, ssd, fuentePoder) {
     this.cpu = cpu;
