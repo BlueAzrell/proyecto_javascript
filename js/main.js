@@ -73,9 +73,7 @@ for (const articulo of articulos) { //DOM de elementos al HTML
   botonComprar.id = `${articulo.id}`;
 
   botonComprar.onclick = () => { //Compra del articulo que se ingresa en el carrito usando push
-    const articuloComprado = articulos.find( 
-      (articulo) => articulo.id === botonComprar.id
-    );
+    const articuloComprado = articulos.find(articulo => articulo.id === botonComprar.id);
     carrito.push({
       nombre: articuloComprado.modelo,
       precio: articuloComprado.precio,
@@ -93,15 +91,15 @@ const mostrarCarrito = () => {
     contenedorCarrito.innerHTML += precioarticulo;
   }
 
-  const total = carrito.reduce( //usando el metodo reduce, se suma el total de todos los articulos ungresados al carrito
-    (cuenta, articulo) => cuenta + articulo.precio,
-    0
-  );
-  contenedorCarrito.append(`Total Compra :  ${total}`); 
+  const total = carrito.reduce( //usando el metodo reduce, se suma el total de todos los articulos ingresados al carrito
+    (cuenta, articulo) => cuenta + articulo.precio, 0);
+  contenedorCarrito.append(`Total Compra :  ${total}`)
+
+}
 
 let botonCarrito = document.getElementById("btnCarrito");
 botonCarrito.onclick = mostrarCarrito; //se hace un display del total de la compra, sin embargo, aún no consigo la manera de hacer que solo se imprima una vez
-};
+
 
 //inicio del botón de búsqueda
 const btnbuscar = document.getElementById("btnBuscar");
