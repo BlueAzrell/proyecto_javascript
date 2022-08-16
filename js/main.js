@@ -145,7 +145,7 @@ if (pieza != "procesador") {
   });
 
   pieza = prompt("Ingresar otra pieza"); //el prompt preguntará 2 veces antes de hacer display de un error y dejar pasar igual al constructor
-
+}else{
 const Toast = Swal.mixin({
   toast: true,
   position: 'top-end',
