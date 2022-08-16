@@ -214,9 +214,9 @@ function mostrarPcs() {
     li.innerHTML = `
     <hr> 
     ${cpu} - 
-    ${ram && ram + " GB y -"}
+    ${ram && ram + " GB -"}
     ${ssd && ssd + " - "}
-    <a href="${fuentePoder}" target="blank">Ver review</a>`;
+    ${fuentePoder}`;
 
     const botonBorrar = document.createElement("button");
     botonBorrar.innerText = "Borrar";
