@@ -81,7 +81,9 @@ for (const articulo of articulos) { //DOM de elementos al HTML
 
     Toastify({
       text: "Item Agregado al Carrito", 
-      duration: 3000
+      duration: 3000,
+      style: {
+     background: "linear-gradient(to right, #0075ff, #00b109)"}
       }).showToast();
   };
   divarticulo.append(imgarticulo, nombrearticulo, precioarticulo, botonComprar);

@@ -1,31 +1,32 @@
-html,body{
+html,
+body {
   width: 100%;
   height: 100%;
 }
 
-.titulo-pagina{
+.titulo-pagina {
   width: 100%;
   height: 8%;
   display: flex;
   justify-content: space-around;
   align-content: center;
-  background-color: rgb(94, 94, 255);
+  background-color: #54582f;
   color: rgb(255, 255, 255);
   margin: 0;
   padding-top: 12px;
 }
 
-.contenedor-tienda{
+.contenedor-tienda {
   padding-top: 3%;
   display: flex;
   width: 100%;
   height: auto;
   justify-content: space-around;
-  background-color: rgba(164, 40, 247, 0.644);
+  background-color: #54582f;
   flex-wrap: wrap;
 }
 
-.card{
+.card {
 
   height: 500px;
   width: 400px;
@@ -36,28 +37,340 @@ html,body{
   flex-direction: center;
 }
 
-.card-img-top{
+.card-img-top {
 
   height: 280px;
   width: 280px;
 }
 
-.nombre-articulo{
+.nombre-articulo {
 
   color: rgb(235, 211, 75);
   font-weight: 800;
 }
 
-.card-precio{
+.card-precio {
 
   font-weight: 500;
-  color:rgba(250, 198, 29, 0.767)
+  color: rgba(250, 198, 29, 0.767)
 }
 
-.red{
+.red {
   color: red;
 }
 
-.blue{
-  color: rgb(72, 59, 255);
+.blue {
+  color: #54582f;
+}
+
+/*Variables*/
+.s-jumbo {
+  font-size: 6.8em;
+}
+
+.s-display {
+  font-size: 3.2em;
+}
+
+.s-title {
+  font-size: 4.3em;
+}
+
+.s-text {
+  font-size: 3em;
+}
+
+.s-caption {
+  font-size: 2em;
+}
+
+.s-mini {
+  font-size: 1.5em;
+}
+
+.p-xlarge {
+  padding: 5rem;
+}
+
+.p-large {
+  padding: 3rem;
+}
+
+.p-medium {
+  padding: 2rem;
+}
+
+.p-small {
+  padding: 1.5rem;
+}
+
+.p-xsmall {
+  padding: 1rem;
+}
+
+/*Helpers*/
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Normalize es el reseteo de CSS que le quita los valores por defecto del navegador*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Globals*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background-color: #fff4ff;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: #54582f;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* BOTÓN */
+.botono,
+.principal__button {
+  color: #ebebeb;
+  padding: 10px;
+  max-width: 100px;
+  background-color: #54582f;
+  visibility: visible;
+  margin-top: 0;
+  line-height: 1;
+  margin-bottom: 5px;
+  font-size: large;
+  border-style: ridge;
+  border-color: #52004f1c;
+  border-radius: 15px;
+}
+
+.botono:hover,
+.principal__button:hover {
+  animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 15px #7d60a6,
+      0 0 30px #54582f;
+  }
+}
+
+.principal__button {
+  justify-self: center;
+  margin: 10px;
+}
+
+.principal__button a {
+  text-decoration: none;
+  color: #ebebeb;
+}
+
+input {
+  border-radius: 7px;
+  border-color: #52004f1c;
+}
+
+/* PARTIALS */
+.container nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /*Centra los hijos del contenedor flex de manera vertical.*/
+  justify-content: space-between;
+  background-color: #ebebeb;
+  padding-block: 15px;
+  border-radius: 9px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navlogo {
+  margin-right: 50px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+#toggler,
+.navbar label {
+  display: none;
+  /*Ocultará la checkbox en pantallas más grandes.*/
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  flex-basis: 30%;
+  padding-bottom: 2%;
+}
+
+.menu .menu__item {
+  border: 2px solid #ebebeb;
+  transition: all .3s ease-in-out;
+}
+
+.menu .menu__item:hover {
+  border-color: #54582f;
+  border-radius: 10px;
+}
+
+.menu .menu__item .menu__link {
+  font-size: 1.8em;
+  padding: 1rem;
+}
+
+.navbar .menu .menu__item:hover .sub-menu {
+  display: block;
+}
+
+.navbar .menu__item .sub-menu {
+  display: none;
+  position: absolute;
+}
+
+.navbar .menu .menu__item:hover .sub-menu {
+  display: block;
+}
+
+.menu__item .sub-menu .sub-menu__link {
+  padding: 1rem;
+  font-size: 1.8em;
+  transition: all .3s ease-in-out;
+  background-color: #ebebeb;
+  border-style: ridge;
+  border-color: #52004f1c;
+  border-radius: 10px;
+}
+
+.menu__item .sub-menu .sub-menu__link:hover {
+  background-color: #54582f;
+  color: #ffeddf;
+  border-radius: 10px;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 600px) {
+  .menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .navbar label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  #toggler:checked~.menu {
+    max-height: 100%;
+  }
+}
+
+.foot {
+  height: 10vh;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.foot h3 a {
+  color: #54582f;
+}
+
+/* VIEWS */
+.principal {
+  flex-wrap: wrap;
+  background-color: #52004f1c;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 0.79vh;
+  border-radius: 10px;
+  margin-bottom: 0.5vh;
+  width: 201vh;
+}
+
+.principal__picture {
+  flex-flow: 1;
+  flex-basis: 50%;
+  min-width: 320px;
+}
+
+.principal__description {
+  flex-grow: 1;
+  order: -1;
+  align-items: center;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: rgba(255, 255, 255, 0.808);
+}
+
+.principal__description p {
+  font-family: "Barlow Condensed", sans-serif;
+  color: black;
+}
+
+.principal__img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.principal__container p {
+  line-height: 1.5;
+}
+
+.menu {
+  font-size: .8em;
+}
+
+section {
+  padding-top: 2vh;
+}
+
+article p {
+  padding: 2rem;
 }
